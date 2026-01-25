@@ -11,7 +11,8 @@ def scan_directory(directory_path):
             extension = None
         else:
             item_type = "file"
-            extension = os.path.splitext(entry)[1].lower()
+            ext = os.path.splitext(entry)[1].lower()
+            extension = ext if ext else None
 
         item_info = {
             "name": entry,
@@ -23,3 +24,9 @@ def scan_directory(directory_path):
         items.append(item_info)
 
     return items
+
+if __name__ == "__main__":
+    result = scan_directory(".")
+    for item in result:
+        print(item)
+
