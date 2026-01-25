@@ -25,8 +25,4 @@ def scan_directory(directory_path):
 
     return items
 
-if __name__ == "__main__":
-    result = scan_directory(".")
-    for item in result:
-        print(item)
 
