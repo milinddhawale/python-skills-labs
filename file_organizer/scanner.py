@@ -5,6 +5,12 @@ def scan_directory(directory_path):
 
     for entry in os.listdir(directory_path):
         full_path = os.path.join(directory_path, entry)
-        items.append(full_path)
+
+        item_info = {
+            "name": entry,
+            "path": full_path
+        }
         
+        items.append(item_info)
+
     return items
