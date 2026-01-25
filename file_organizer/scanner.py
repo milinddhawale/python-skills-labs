@@ -1,10 +1,8 @@
 import os
 
 def scan_directory(directory_path):
-    """
-    Scan the given directory and return metadata
-    about files and directories.
-    
-    """
     items = []
+
+    for entry in os.listdir(directory_path):
+        items.append(entry)
     return items
