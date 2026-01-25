@@ -5,12 +5,21 @@ def scan_directory(directory_path):
 
     for entry in os.listdir(directory_path):
         full_path = os.path.join(directory_path, entry)
+        
+        if os.path.isdir(full_path):
+            item_type = "directory"
+            extension = None
+        else:
+            item_type = "file"
+            extension = os.path.splitext(entry)[1].lower()
 
         item_info = {
             "name": entry,
-            "path": full_path
+            "path": full_path,
+            "type": item_type,
+            "extension": extension
         }
-        
+
         items.append(item_info)
 
     return items
