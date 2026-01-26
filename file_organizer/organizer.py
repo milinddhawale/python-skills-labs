@@ -27,3 +27,21 @@ def decide_targets(scanned_items):
             targets[item["path"]] = "others"
 
     return targets
+
+if __name__ == "__main__":
+    sample = [
+        {"path": "a.pdf", "type": "file", "extension": ".pdf"},
+        {"path": "b.png", "type": "file", "extension": ".png"},
+        {"path": "c", "type": "file", "extension": None},
+        {"path": "folder", "type": "directory", "extension": None}
+    ]
+
+    print(decide_targets(sample))
+
+"""
+output:
+(PSL) C:\Users\milind dhawle\OneDrive\Desktop\python-practice-labs>python file_organizer\organizer.py
+skipping directory: folder
+{'a.pdf': 'documents', 'b.png': 'images', 'c': 'others'}
+
+"""
