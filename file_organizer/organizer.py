@@ -23,5 +23,7 @@ def decide_targets(scanned_items):
         
         if target_folder:
             targets[item["path"]] = target_folder
+        else:
+            targets[item["path"]] = "others"
 
     return targets
