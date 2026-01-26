@@ -12,4 +12,16 @@ def decide_targets(scanned_items):
             print(f"skipping directory: {item['path']}")
             continue
 
+        extension = item["extension"]
+        target_folder = None
+
+        if extension:
+            for category, extensions in EXTENSION_MAP.items():
+                if extension in extensions:
+                    target_folder = category
+                    break
+        
+        if target_folder:
+            targets[item["path"]] = target_folder
+
     return targets
