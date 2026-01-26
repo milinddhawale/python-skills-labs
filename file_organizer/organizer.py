@@ -1,3 +1,9 @@
+EXTENSION_MAP = {
+    "documents": [".pdf", ".docx", ".txt"],
+    "images": [".png", ".jpg", ".jpeg"],
+    "audio": [".mp3", ".wav"]
+}
+
 def decide_targets(scanned_items):
     targets = {}
 
