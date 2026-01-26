@@ -8,4 +8,5 @@ def decide_targets(scanned_items):
     Returns:
         dict: mapping of file path to target folder name
     """
-    pass
+    targets = {}
+    return targets
