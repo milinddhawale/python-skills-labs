@@ -35,7 +35,7 @@ file_organizer/
 ```bash
 python main.py
 
-## Exppected Output
+## Expected Output
 test_data/
 ├── documents/
 │   ├── resume.pdf
