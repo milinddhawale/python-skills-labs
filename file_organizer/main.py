@@ -29,4 +29,4 @@ if __name__ == "__main__":
 
     scanned = scan_directory(args.path)
     targets = decide_targets(scanned)
-    move_files(targets, args.path)
+    move_files(targets, args.path, dry_run=args.dry_run)
